@@ -4,7 +4,7 @@
 
 This project is a simple, user-friendly web-based chess clock built using modern technologies. It allows players to keep track of their time while playing chess, with a sleek and responsive UI.
 
-![Website Preview](Chess-Clock/Images/ss.png)
+![Website Preview](Images/ss.png)
 
 ## Features
 
