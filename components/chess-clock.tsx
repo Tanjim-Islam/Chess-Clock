@@ -34,7 +34,7 @@ const formatTime = (seconds: number) => {
 const MIN_TIME = 30; // 30 seconds
 const TIME_STEP = 30; // 30 seconds
 
-export default function ChessClock() {
+export default function EnhancedChessClock() {
   const [player1Time, setPlayer1Time] = useState(600); // 10 minutes in seconds
   const [player2Time, setPlayer2Time] = useState(600);
   const [activePlayer, setActivePlayer] = useState<1 | 2 | null>(null);
@@ -151,11 +151,11 @@ export default function ChessClock() {
       <Card className="w-full max-w-2xl shadow-lg">
         <CardContent className="p-6">
           <div className="grid grid-cols-2 gap-6 mb-6">
-            <div className="relative flex items-center">
+            <div className="relative flex items-center sm:block">
               <Button
                 size="sm"
                 variant="ghost"
-                className="absolute left-2 z-10"
+                className="absolute left-2 top-2 sm:top-auto sm:bottom-2 z-10"
                 onClick={(e) => {
                   e.stopPropagation();
                   adjustTime(1, -TIME_STEP);
@@ -180,7 +180,7 @@ export default function ChessClock() {
               <Button
                 size="sm"
                 variant="ghost"
-                className="absolute right-2 z-10"
+                className="absolute right-2 top-2 sm:top-auto sm:bottom-2 z-10"
                 onClick={(e) => {
                   e.stopPropagation();
                   adjustTime(1, TIME_STEP);
@@ -190,11 +190,11 @@ export default function ChessClock() {
                 <PlusIcon className="w-4 h-4" />
               </Button>
             </div>
-            <div className="relative flex items-center">
+            <div className="relative flex items-center sm:block">
               <Button
                 size="sm"
                 variant="ghost"
-                className="absolute left-2 z-10"
+                className="absolute left-2 top-2 sm:top-auto sm:bottom-2 z-10"
                 onClick={(e) => {
                   e.stopPropagation();
                   adjustTime(2, -TIME_STEP);
@@ -219,7 +219,7 @@ export default function ChessClock() {
               <Button
                 size="sm"
                 variant="ghost"
-                className="absolute right-2 z-10"
+                className="absolute right-2 top-2 sm:top-auto sm:bottom-2 z-10"
                 onClick={(e) => {
                   e.stopPropagation();
                   adjustTime(2, TIME_STEP);
